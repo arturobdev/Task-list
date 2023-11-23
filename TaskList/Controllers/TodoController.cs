@@ -55,7 +55,7 @@ namespace TaskList.Controllers
         }
 
         [HttpPut]
-        [Route("Update")]
+        [Route("Update/{id}")]
         public async Task<IActionResult> Update(int id, TaskDTO taskDTO)
         {
             var result = await _unitOfWork.TodoRepository.UpdateTask(id, taskDTO);
@@ -68,7 +68,7 @@ namespace TaskList.Controllers
         }
 
         [HttpDelete]
-        [Route("Delete")]
+        [Route("Delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _unitOfWork.TodoRepository.DeleteTask(id);
