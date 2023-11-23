@@ -19,7 +19,7 @@ namespace TaskList.Entities
         public string Description { get; set; }
 
         [Column("is_completed")]
-        public bool IsCompleted { get; set; }
+        public bool IsCompleted { get; set; } = false;
 
 
         public static implicit operator Todo(TaskDTO v)
